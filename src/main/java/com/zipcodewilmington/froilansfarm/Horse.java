@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Horse {
+import java.util.ArrayList;
+
+public class Horse implements Rideable{
+    ArrayList<Rider> ridenHorse;
 }

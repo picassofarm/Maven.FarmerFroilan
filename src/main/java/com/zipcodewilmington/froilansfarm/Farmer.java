@@ -1,4 +1,16 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Farmer {
+import java.util.ArrayList;
+
+public class Farmer implements Rider, Botanist{
+    private boolean mount(){
+        return true;
+    }
+
+    private boolean dismount(){
+        return true;
+    }
+
+    private void plant(){
+    }
 }
