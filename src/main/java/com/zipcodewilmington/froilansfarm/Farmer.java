@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Farmer {
+public class Farmer implements Rider, Botanist{
 }
