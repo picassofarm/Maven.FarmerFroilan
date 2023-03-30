@@ -15,5 +15,9 @@ public class CropSectionTests {
 
     @Test
     public void testTomatoYield() {
+        TomatoPlant tomato = new TomatoPlant();
+
+        Assert.assertTrue(tomato.yield(true) instanceof Tomato);
+        Assert.assertNull(tomato.yield(false));
     }
 }
