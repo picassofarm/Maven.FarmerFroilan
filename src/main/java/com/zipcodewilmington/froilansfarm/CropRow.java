@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class CropRow extends Crop{
-    public Object yield(boolean harvestable) {
-        return null;
-    }
+import java.util.ArrayList;
+
+public class CropRow extends ArrayList<Crop> {
+
 }
