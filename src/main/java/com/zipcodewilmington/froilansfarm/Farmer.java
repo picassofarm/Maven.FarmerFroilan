@@ -3,14 +3,16 @@ package com.zipcodewilmington.froilansfarm;
 import java.util.ArrayList;
 
 public class Farmer implements Rider, Botanist{
-    private boolean mount(){
-        return true;
+
+    public CropRow plant() {
+        return null;
     }
 
-    private boolean dismount(){
-        return true;
+    public boolean mount() {
+        return false;
     }
 
-    private void plant(){
+    public boolean dismount() {
+        return false;
     }
 }

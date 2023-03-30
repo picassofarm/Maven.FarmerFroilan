@@ -1,14 +1,15 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Pilot implements Rider{
-    private boolean mount(){
-        return true;
-    }
-
-    private boolean dismount(){
-        return true;
-    }
+public class Pilot extends Animal implements Rider{
 
     private void fertilize(){
+    }
+
+    public boolean mount() {
+        return false;
+    }
+
+    public boolean dismount() {
+        return false;
     }
 }
