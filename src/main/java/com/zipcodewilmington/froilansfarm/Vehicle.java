@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Vehicle <RiderType extends Rider> implements Rideable, NoiseMaker  {
+public class Vehicle <RiderType extends Rider> implements Rideable, NoiseMaker, Edible {
 
     private void ride(){
     }
