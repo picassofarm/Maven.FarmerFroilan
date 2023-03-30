@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Tractor {
+public class Tractor extends Vehicle <Farmer> implements FarmVehicle {
 }

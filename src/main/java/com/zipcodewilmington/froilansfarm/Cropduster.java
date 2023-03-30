@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Cropduster {
+public class Cropduster extends Aircraft implements FarmVehicle{
 }
