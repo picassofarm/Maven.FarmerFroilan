@@ -1,7 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
 public class TomatoPlant extends Crop<Tomato> {
-    public <T> T yield(boolean harvestable) {
-        return null;
+    public Tomato yield(boolean harvestable) {
+        if(!harvestable){
+            return null;
+        }
+        return new Tomato();
     }
 }
