@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 
-public class Pilot extends Person implements Rider<Aircraft>{
+public class Pilot extends Person implements Rider{
 
     public boolean mount() {
         return false;

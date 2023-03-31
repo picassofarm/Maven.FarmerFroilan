@@ -2,8 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
 
-public class Farmer extends Person implements Rider<Tractor>, Botanist{
-
+public class Farmer extends Person implements Botanist{
 
     public CropRow plant() {
         return null;
