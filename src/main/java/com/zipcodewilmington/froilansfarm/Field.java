@@ -2,6 +2,5 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
 
-public class Field {
-    ArrayList<CropRow> row;
+public class Field extends ArrayList<CropRow>{
 }

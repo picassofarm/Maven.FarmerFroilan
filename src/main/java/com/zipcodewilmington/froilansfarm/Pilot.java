@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Pilot extends Animal implements Rider{
+public class Pilot extends Person implements Rider{
 
     private void fertilize(){
     }
