@@ -15,7 +15,8 @@ public class VehicleTest extends TestCase {
     @Test
     public void NoiseMaker() {
         Vehicle <Rider> vehicle = new Vehicle<>();
-        String expectedSound = "";
-        assertEquals(expectedSound, vehicle.toString());
+        String expectedSound = "vroom";
+        String actualSound = vehicle.makeNoise();
+        assertEquals(expectedSound, actualSound);
     }
 }
