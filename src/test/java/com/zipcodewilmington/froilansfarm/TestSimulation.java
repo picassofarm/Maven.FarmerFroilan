@@ -5,12 +5,15 @@ import org.junit.Test;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class TestSimulation {
+    Farm farm;
+    Pilot froilanda;
 
     @Before
     public void testSetup(){
-        Farm farm = new Farm();
+        farm = new Farm();
         Pilot froilanda = new Pilot();
         Farmer froilan = new Farmer();
         farm.house.add(froilan);
@@ -43,9 +46,12 @@ public class TestSimulation {
         field.add(cropRow5);
         farm.fields.add(field);
 
-        for(int i = 0; i < 15; i++){
-
-        }
+        double r;
+        for(int i = 0; i < 50; i++){
+          farm.cornSilo.add(new Corn());
+          farm.tomatoSilo.add(new Tomato());
+          farm.carton.add(new Egg());
+       }
 
         ChickenCoop chickenCoop1 = new ChickenCoop();
         List<Chicken> chickens1 = Collections.nCopies(4, new Chicken());
@@ -92,6 +98,50 @@ public class TestSimulation {
 
     @Test
     public void thePlotChickens() {
+        Consumer<Farm> morning = (farm) -> {
+            int num;
+            for (Stable s: farm.stable) {
+                for(Horse h: s){
+                    num = (int) Math.round(Math.random());
+//                    farm.house.get(num).mount(h);
+//                    farm.house.get(num).dismount(h);
+                    h.eat(farm.tomatoSilo.remove(0));
+                    h.eat(farm.tomatoSilo.remove(0));
+                    h.eat(farm.tomatoSilo.remove(0));
+                }
+            }
 
+            farm.house.get(0).eat(farm.cornSilo.remove(0));
+            farm.house.get(0).eat(farm.tomatoSilo.remove(0));
+            farm.house.get(0).eat(farm.tomatoSilo.remove(0));
+            for (int i = 0; i < 5; i++) {
+                farm.house.get(0).eat(farm.carton.remove(0));
+            }
+
+            farm.house.get(1).eat(farm.cornSilo.remove(0));
+            farm.house.get(1).eat(farm.cornSilo.remove(0));
+            farm.house.get(1).eat(farm.tomatoSilo.remove(0));
+            farm.house.get(1).eat(farm.carton.remove(0));
+            farm.house.get(1).eat(farm.carton.remove(0));
+       };
+
+        //sunday
+//        farm.house.get(0).plant(farm.fields.get(0)); //these can be uncommented once the methods are written
+//        farm.house.get(0).plant(farm.fields.get(0));
+//        farm.house.get(0).plant(farm.fields.get(0));
+
+
+        //monday
+//        farm.house.get(1).mount(farm.garage.get(0));
+//        farm.garage.get(0).fly(farm.fields);
+//        farm.garage.get(0).fertilize();
+//        farm.house.get(1).dismount(farm.garage.get(0));
+
+        //tuesday
+//        farm.house.get(0).mount(farm.garage.get(1));
+//        farm.garage.get(1).harvest(farm, farm.fields);
+//        farm.house.get(0).dismount(farm.garage.get(1));
+
+        //wednesday
     }
 }
