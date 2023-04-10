@@ -8,5 +8,9 @@ public class Farm {
     FarmHouse house;
     ArrayList<Field> fields;
     ArrayList<Vehicle> garage;
-    ArrayList<Edible> silo;
+    ArrayList<Corn> cornSilo;
+    ArrayList<Tomato> tomatoSilo;
+    ArrayList<Egg> carton;
+
+
  }
