@@ -2,17 +2,18 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
 
-public class Farmer extends Person implements Botanist{
+public class Farmer extends Person implements Botanist, Rider{
 
-    public CropRow plant() {
-        return null;
+    public CropRow plant(CropRow cropRow, Crop<?> crop) {
+        cropRow.add(crop);
+        return cropRow;
     }
 
-    public boolean mount() {
-        return false;
+    public boolean mount(Rideable<?> r) {
+        return true;
     }
 
-    public boolean dismount() {
+    public boolean dismount(Rideable<?> r) {
         return false;
     }
 }

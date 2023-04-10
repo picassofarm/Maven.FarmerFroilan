@@ -5,4 +5,10 @@ public class Chicken extends Animal<Corn> implements Produce<Egg>{
     public Egg yield(boolean hasBeenFertilized){
         return new Egg();
     }
+
+    @Override
+    public String eat(Object food) {
+        super.eat(food);
+        return "Cluck cluck (This means that was some delicious corn.)";
+    }
 }

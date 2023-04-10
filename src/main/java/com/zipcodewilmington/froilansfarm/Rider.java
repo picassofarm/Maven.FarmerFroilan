@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 public interface Rider{
-    public boolean mount();
+    public boolean mount(Rideable<?> r);
 
-    public boolean dismount();
+    public boolean dismount(Rideable<?> r);
 }
