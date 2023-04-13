@@ -1,9 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Aircraft extends Vehicle <Pilot> {
+public abstract class Aircraft extends Vehicle <Pilot> {
+    public abstract String Fly("Nyyyyyyyuuuuummmmm");
 
-    public String Fly(){
-
-        return null;
-    }
 }

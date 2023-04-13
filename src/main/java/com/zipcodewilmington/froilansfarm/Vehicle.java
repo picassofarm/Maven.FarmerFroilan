@@ -1,12 +1,11 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Vehicle <RiderType extends Rider> implements Rideable, NoiseMaker, Edible {
+public abstract class Vehicle <RiderType extends Rider> implements Rideable, NoiseMaker, Edible {
 
     private void ride(){
     }
+    public abstract String makeNoise();
 
-    public String makeNoise(){
-
-        return "vroom";
     }
-}
+
+
