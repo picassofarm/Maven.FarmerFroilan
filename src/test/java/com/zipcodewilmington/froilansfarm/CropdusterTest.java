@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CropdusterTest extends TestCase {
+public class CropdusterTest{
 
     @Test
     public void instanceTest(){
@@ -14,13 +14,22 @@ public class CropdusterTest extends TestCase {
     }
 
     @Test
-    public void flying(){
+    public void TestMakeNoise() {
         Cropduster cropduster = new Cropduster();
-        String result = cropduster.Fly();
-        String expected = "Nyyyyyyyuuuuummmmm"; //had to remove string from Aircraft class because abstract.
-        Assert.assertEquals(expected, result);
-
+        Assert.assertEquals("Vroom", cropduster.makeNoise());
     }
 
+    @Test
+    public void TestFly() {
+        CropRow expected = new CropRow();
+        Cropduster cropduster = new Cropduster();
+        cropduster.fly(expected);
+
+        CropRow actual = cropduster.cropRow;
+
+        Assert.assertEquals(expected, actual);
+
+
+    }
 
 }

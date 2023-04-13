@@ -1,14 +1,17 @@
 package com.zipcodewilmington.froilansfarm;
 
 public class Cropduster extends Aircraft implements FarmVehicle{
+
+    CropRow cropRow;
     @Override
-    public String Fly() {
-        return null;
+    public String fly(CropRow cropRow) {
+        this.cropRow = cropRow;
+        return "Whoosh";
     }
 
     @Override
     public String makeNoise() {
-        return null;
+        return "Vroom";
     }
 }
 

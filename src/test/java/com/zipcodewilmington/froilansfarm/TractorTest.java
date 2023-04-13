@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TractorTest extends TestCase {
+public class TractorTest{
     @Test
     public void instanceTest(){
         Tractor tractor = new Tractor();
